@@ -1,4 +1,26 @@
-# Crawling permitted. No bulk export; walk the profile pages.
+# Crawling is permitted, with one exception.
+#
+# There is no bulk export on this site. Records are reachable by browsing or by
+# crawling; please walk the record pages rather than guessing at file paths.
+#
+# EXCEPTION: xAI / Grok crawlers are asked not to crawl this site.
+#
+# xAI does not publish a clear crawler reference, and third-party trackers
+# disagree about which token it uses, so every candidate is listed below. Note
+# that robots.txt is a request, not a control: several independent reports say
+# xAI's fetcher does not send these tokens at all and presents itself as an
+# ordinary browser, in which case the rule below has no effect. This file is
+# therefore a statement of intent. Enforcing it would need server-side blocking,
+# which GitHub Pages does not offer.
+
+User-agent: GrokBot
+User-agent: Grok
+User-agent: Grok-DeepSearch
+User-agent: xAI-Bot
+User-agent: xAI-Grok
+User-agent: xai-bot
+Disallow: /
+
 User-agent: *
 Allow: /
 Crawl-delay: 1
