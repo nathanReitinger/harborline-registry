@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Company registry &mdash; Harborline Registry (synthetic data)</title>
+<style>
+:root{--ink:#101c2c;--ink2:#4a5a6e;--ink3:#8494a6;--rule:#e2e8ef;--paper:#f4f7fa;
+ --surface:#fff;--brand:#0b4f6c;--brand2:#1b9aaa;--warn:#8a4b00;--warn-bg:#fff6e6;
+ --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 var(--sans)}
+a{color:var(--brand)}
+.synth{background:var(--warn-bg);border-bottom:2px solid #f0c98a;color:var(--warn);font-size:13px}
+.synth div{max-width:1000px;margin:0 auto;padding:10px 24px}
+.synth b{color:#6b3a00}
+header.top{background:var(--brand);color:#fff}
+header.top div.in{max-width:1000px;margin:0 auto;padding:20px 24px 16px;
+ display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+header.top .logo{font-size:21px;font-weight:600;letter-spacing:-.02em}
+header.top .logo span{opacity:.72;font-weight:400}
+header.top .blurb{font-size:13px;opacity:.82;margin-left:auto}
+nav{background:#08415a;font-size:13.5px}
+nav div{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:#bcd9e5;text-decoration:none;padding:11px 0;display:block}
+nav a:hover,nav a.on{color:#fff;box-shadow:inset 0 -2px 0 var(--brand2)}
+main{max-width:1000px;margin:0 auto;padding:26px 24px 70px}
+h1.pg{font-size:22px;margin:0 0 4px;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--ink2);font-size:13.5px;margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:8px}
+table.reg{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
+table.reg th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+ color:var(--ink3);padding:10px 12px;border-bottom:1px solid var(--rule);white-space:nowrap}
+table.reg td{padding:11px 12px;border-bottom:1px solid var(--rule)}
+table.reg tr:last-child td{border-bottom:0}
+table.reg tr:hover{background:#f8fbfd}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;padding:2px 7px;border-radius:10px;
+ background:#eaf2f6;color:var(--brand);border:1px solid #cfe2eb;white-space:nowrap}
+.pager{margin-top:22px;display:flex;gap:6px;flex-wrap:wrap;font-size:13px}
+.pager a,.pager span{padding:7px 11px;border:1px solid var(--rule);background:var(--surface);
+ text-decoration:none;color:var(--ink2);border-radius:5px}
+.pager .here{background:var(--brand);border-color:var(--brand);color:#fff}
+.prof{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:18px 0 22px}
+.prof > div{background:var(--surface);padding:13px 15px}
+.prof .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:5px}
+.prof .v{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.prof .v small{font-size:12px;font-weight:400;color:var(--ink2)}
+dl.fields{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:8px;
+ overflow:hidden}
+dl.fields div{display:flex;gap:16px;padding:10px 15px;border-bottom:1px solid var(--rule);
+ font-size:14px}
+dl.fields div:last-child{border-bottom:0}
+dl.fields dt{width:220px;flex:0 0 220px;color:var(--ink2)}
+dl.fields dd{margin:0}
+.aka{background:#f8fbfd;border:1px dashed #cfe2eb;border-radius:8px;padding:12px 15px;
+ font-size:13.5px;margin:0 0 20px}
+.aka code{background:#fff;border:1px solid var(--rule);border-radius:4px;padding:1px 6px;
+ font-size:12.5px}
+.crumb{font-size:12.5px;color:var(--ink3);margin-bottom:14px}
+footer{border-top:1px solid var(--rule);background:var(--surface);font-size:12.5px;
+ color:var(--ink3)}
+footer div{max-width:1000px;margin:0 auto;padding:20px 24px 34px}
+@media(max-width:640px){dl.fields div{flex-direction:column;gap:2px}
+ dl.fields dt{flex:none;width:auto}}
+</style></head><body>
+<div class="synth"><div><b>Synthetic data.</b> Company names are real. Every figure on this site &mdash; headcount, revenue, sector, rating, executive &mdash; is generated for a classroom exercise, and the executives are fictional people. Nothing here is a fact about any real company.</div></div>
+<header class="top"><div class="in">
+  <span class="logo">Harborline <span>Registry</span></span>
+  <span class="blurb">Firmographic profiles &middot; 130 companies &middot; teaching fixture</span>
+</div></header>
+<nav><div><a href="index.html" class="on">Registry</a><a href="sectors.html" class="">By sector</a><a href="sizes.html" class="">By size</a><a href="methodology.html" class="">Methodology</a></div></nav>
+<main><h1 class="pg">Company registry</h1>
+<p class="sub">Showing 61&ndash;80 of 130.
+  Each company has a profile page carrying the full field set, including the trade
+  names and corporate variants it is known by.</p>
+<div class="card"><table class="reg">
+<thead><tr><th>Company</th><th>Sector</th><th class="num">Employees</th>
+  <th class="num">Revenue</th><th>HQ</th></tr></thead>
+<tbody><tr>
+  <td><a href="company/match-group-inc.html">Match Group, Inc.</a></td>
+  <td><span class="pill">Dating &amp; social discovery</span></td>
+  <td class="num">3,854</td>
+  <td class="num">$1,851M</td>
+  <td>UT</td>
+</tr><tr>
+  <td><a href="company/medium-corporation.html">Medium Corporation</a></td>
+  <td><span class="pill">Media &amp; publishing</span></td>
+  <td class="num">56</td>
+  <td class="num">$9M</td>
+  <td>FL</td>
+</tr><tr>
+  <td><a href="company/meta-platforms-inc.html">Meta Platforms, Inc.</a></td>
+  <td><span class="pill">Social platform</span></td>
+  <td class="num">102,422</td>
+  <td class="num">$108,806M</td>
+  <td>GA</td>
+</tr><tr>
+  <td><a href="company/metafilter-network.html">MetaFilter Network</a></td>
+  <td><span class="pill">Social platform</span></td>
+  <td class="num">47</td>
+  <td class="num">$72M</td>
+  <td>NJ</td>
+</tr><tr>
+  <td><a href="company/mg-freesites-ltd.html">MG Freesites Ltd</a></td>
+  <td><span class="pill">Adult content</span></td>
+  <td class="num">232</td>
+  <td class="num">$294M</td>
+  <td>GA</td>
+</tr><tr>
+  <td><a href="company/mullvad-vpn-ab.html">Mullvad VPN AB</a></td>
+  <td><span class="pill">Cloud infrastructure</span></td>
+  <td class="num">40</td>
+  <td class="num">$26M</td>
+  <td>VA</td>
+</tr><tr>
+  <td><a href="company/namecheap-inc.html">Namecheap, Inc.</a></td>
+  <td><span class="pill">Cloud infrastructure</span></td>
+  <td class="num">259</td>
+  <td class="num">$211M</td>
+  <td>NY</td>
+</tr><tr>
+  <td><a href="company/neocities-inc.html">Neocities Inc.</a></td>
+  <td><span class="pill">Cloud infrastructure</span></td>
+  <td class="num">55</td>
+  <td class="num">$39M</td>
+  <td>PA</td>
+</tr><tr>
+  <td><a href="company/newsmatics-inc.html">Newsmatics Inc.</a></td>
+  <td><span class="pill">Media &amp; publishing</span></td>
+  <td class="num">46</td>
+  <td class="num">$12M</td>
+  <td>IL</td>
+</tr><tr>
+  <td><a href="company/nextdoor-inc.html">Nextdoor, Inc.</a></td>
+  <td><span class="pill">Social platform</span></td>
+  <td class="num">4,338</td>
+  <td class="num">$3,402M</td>
+  <td>FL</td>
+</tr><tr>
+  <td><a href="company/notion-labs-inc.html">Notion Labs, Inc.</a></td>
+  <td><span class="pill">Enterprise software</span></td>
+  <td class="num">238</td>
+  <td class="num">$72M</td>
+  <td>NY</td>
+</tr><tr>
+  <td><a href="company/omegle-com-llc.html">Omegle.com LLC</a></td>
+  <td><span class="pill">Social platform</span></td>
+  <td class="num">60</td>
+  <td class="num">$111M</td>
+  <td>NY</td>
+</tr><tr>
+  <td><a href="company/ovhcloud-sas.html">OVHcloud SAS</a></td>
+  <td><span class="pill">Cloud infrastructure</span></td>
+  <td class="num">971</td>
+  <td class="num">$708M</td>
+  <td>MA</td>
+</tr><tr>
+  <td><a href="company/patreon-inc.html">Patreon, Inc.</a></td>
+  <td><span class="pill">Media &amp; publishing</span></td>
+  <td class="num">255</td>
+  <td class="num">$47M</td>
+  <td>NC</td>
+</tr><tr>
+  <td><a href="company/perry-street-software-inc.html">Perry Street Software, Inc.</a></td>
+  <td><span class="pill">Dating &amp; social discovery</span></td>
+  <td class="num">15</td>
+  <td class="num">$10M</td>
+  <td>IL</td>
+</tr><tr>
+  <td><a href="company/pinboard-inc.html">Pinboard Inc.</a></td>
+  <td><span class="pill">Social platform</span></td>
+  <td class="num">10</td>
+  <td class="num">$13M</td>
+  <td>IL</td>
+</tr><tr>
+  <td><a href="company/pinterest-inc.html">Pinterest, Inc.</a></td>
+  <td><span class="pill">Social platform</span></td>
+  <td class="num">5,174</td>
+  <td class="num">$8,801M</td>
+  <td>NY</td>
+</tr><tr>
+  <td><a href="company/plaid-inc.html">Plaid Inc.</a></td>
+  <td><span class="pill">Financial technology</span></td>
+  <td class="num">212</td>
+  <td class="num">$157M</td>
+  <td>NY</td>
+</tr><tr>
+  <td><a href="company/playtika-holding-corp.html">Playtika Holding Corp.</a></td>
+  <td><span class="pill">Gaming</span></td>
+  <td class="num">1,536</td>
+  <td class="num">$1,119M</td>
+  <td>GA</td>
+</tr><tr>
+  <td><a href="company/proton-ag.html">Proton AG</a></td>
+  <td><span class="pill">Cloud infrastructure</span></td>
+  <td class="num">362</td>
+  <td class="num">$168M</td>
+  <td>IL</td>
+</tr></tbody></table></div>
+<div class="pager"><a href="index.html">1</a><a href="index-2.html">2</a><a href="index-3.html">3</a><span class="here">4</span><a href="index-5.html">5</a><a href="index-6.html">6</a><a href="index-7.html">7</a></div></main>
+<footer><div>
+  Harborline Registry is a fictional data vendor invented for a research-methods
+  workshop. It is not affiliated with, and does not reproduce data from, any real
+  firmographic provider. All figures are generated from a seeded random number
+  generator; the executives named are fictional people. No bulk export is offered.
+</div></footer>
+</body></html>

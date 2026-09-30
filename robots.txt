@@ -1,0 +1,4 @@
+# Crawling permitted. No bulk export; walk the profile pages.
+User-agent: *
+Allow: /
+Crawl-delay: 1
