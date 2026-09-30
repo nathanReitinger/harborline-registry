@@ -1,3 +1,10 @@
+# NOT AUTHORITATIVE. Crawlers read robots.txt per origin, at the root of the
+# host, so the file that actually governs this site is
+#     https://nathanreitinger.github.io/robots.txt
+# and it lives in the nathanReitinger.github.io repository. This copy is kept
+# only so the policy travels with the site if it is ever moved to its own
+# domain, where it WOULD be read.
+#
 # Crawling is permitted, with one exception.
 #
 # There is no bulk export on this site. Records are reachable by browsing or by
