@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telecommunications &mdash; Harborline Registry</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Harborline Registry — firmographic profiles for 1,000 technology and media companies.">
+<style>
+:root{--ink:#101c2c;--ink2:#4a5a6e;--ink3:#8494a6;--rule:#e2e8ef;--paper:#f4f7fa;
+ --surface:#fff;--brand:#0b4f6c;--brand2:#1b9aaa;--warn:#8a4b00;--warn-bg:#fff6e6;
+ --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 var(--sans)}
+a{color:var(--brand)}
+.synth{background:var(--warn-bg);border-bottom:2px solid #f0c98a;color:var(--warn);font-size:13px}
+.synth div{max-width:1000px;margin:0 auto;padding:10px 24px}
+.synth b{color:#6b3a00}
+header.top{background:var(--brand);color:#fff}
+header.top div.in{max-width:1000px;margin:0 auto;padding:16px 24px 14px;
+ display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+header.top .logo{font-size:20px;font-weight:600;letter-spacing:-.02em;color:#fff;
+ text-decoration:none;display:flex;align-items:center;gap:9px}
+header.top .logo span{opacity:.68;font-weight:400}
+header.top .logo .mark{width:17px;height:17px;border-radius:3px;flex:0 0 17px;
+ background:linear-gradient(135deg,var(--brand2) 0 50%,#9fd4dd 50% 100%);
+ box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.find{margin-left:auto}
+.find input{width:252px;max-width:46vw;background:rgba(255,255,255,.13);
+ border:1px solid rgba(255,255,255,.26);border-radius:6px;padding:7px 11px;color:#fff;
+ font:13.5px/1 var(--sans)}
+.find input::placeholder{color:rgba(255,255,255,.62)}
+.find input:focus{outline:none;background:rgba(255,255,255,.2);
+ border-color:rgba(255,255,255,.5)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:0 0 22px}
+.stats > div{background:var(--surface);padding:12px 15px}
+.stats .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:4px}
+.stats .v{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.jump{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 6px;font-size:12.5px}
+.jump a{background:var(--surface);border:1px solid var(--rule);border-radius:14px;
+ padding:4px 11px;text-decoration:none;color:var(--ink2)}
+.jump a:hover{border-color:var(--brand2);color:var(--brand)}
+.facet{margin-top:26px;scroll-margin-top:16px}
+.fhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.fhead h2{font-size:17px;font-weight:600;margin:0;letter-spacing:-.01em}
+.fmeta{font-size:12.5px;color:var(--ink3)}
+.hidden{display:none !important}
+.nohits{padding:28px 4px;color:var(--ink3);font-size:14px}
+footer .fin{max-width:1000px;margin:0 auto;padding:24px 24px 30px;
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px 26px}
+footer .fcol{display:flex;flex-direction:column;gap:5px;font-size:13px}
+footer .fcol b{color:var(--ink2);font-size:11px;letter-spacing:.07em;
+ text-transform:uppercase;margin-bottom:3px}
+footer .fcol a{color:var(--brand);text-decoration:none}
+footer .fcol a:hover{text-decoration:underline}
+footer .fbot{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:14px;
+ font-size:12.5px;color:var(--ink3)}
+nav{background:#08415a;font-size:13.5px}
+nav div{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:#bcd9e5;text-decoration:none;padding:11px 0;display:block}
+nav a:hover,nav a.on{color:#fff;box-shadow:inset 0 -2px 0 var(--brand2)}
+main{max-width:1000px;margin:0 auto;padding:26px 24px 70px}
+h1.pg{font-size:22px;margin:0 0 4px;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--ink2);font-size:13.5px;margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:8px}
+table.reg{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
+table.reg th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+ color:var(--ink3);padding:10px 12px;border-bottom:1px solid var(--rule);white-space:nowrap}
+table.reg td{padding:11px 12px;border-bottom:1px solid var(--rule)}
+table.reg tr:last-child td{border-bottom:0}
+table.reg tr:hover{background:#f8fbfd}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;padding:2px 7px;border-radius:10px;
+ background:#eaf2f6;color:var(--brand);border:1px solid #cfe2eb;white-space:nowrap}
+.pager{margin-top:22px;display:flex;gap:6px;flex-wrap:wrap;font-size:13px}
+.pager a,.pager span{padding:7px 11px;border:1px solid var(--rule);background:var(--surface);
+ text-decoration:none;color:var(--ink2);border-radius:5px}
+.pager .here{background:var(--brand);border-color:var(--brand);color:#fff}
+.prof{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:18px 0 22px}
+.prof > div{background:var(--surface);padding:13px 15px}
+.prof .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:5px}
+.prof .v{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.prof .v small{font-size:12px;font-weight:400;color:var(--ink2)}
+dl.fields{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:8px;
+ overflow:hidden}
+dl.fields div{display:flex;gap:16px;padding:10px 15px;border-bottom:1px solid var(--rule);
+ font-size:14px}
+dl.fields div:last-child{border-bottom:0}
+dl.fields dt{width:220px;flex:0 0 220px;color:var(--ink2)}
+dl.fields dd{margin:0}
+.aka{background:#f8fbfd;border:1px dashed #cfe2eb;border-radius:8px;padding:12px 15px;
+ font-size:13.5px;margin:0 0 20px}
+.aka code{background:#fff;border:1px solid var(--rule);border-radius:4px;padding:1px 6px;
+ font-size:12.5px}
+.crumb{font-size:12.5px;color:var(--ink3);margin-bottom:14px}
+footer{border-top:1px solid var(--rule);background:var(--surface);font-size:12.5px;
+ color:var(--ink3)}
+footer div{max-width:1000px;margin:0 auto;padding:20px 24px 34px}
+@media(max-width:640px){dl.fields div{flex-direction:column;gap:2px}
+ dl.fields dt{flex:none;width:auto}}
+</style></head><body>
+
+<header class="top"><div class="in">
+  <a class="logo" href="index.html"><span class="mark"></span>Harborline
+    <span>Registry</span></a>
+  <form class="find" onsubmit="return false"><input id="q" type="search"
+    placeholder="Search 1,000 companies" autocomplete="off" aria-label="Search companies"></form>
+</div></header>
+<nav><div><a href="index.html" class="">Registry</a><a href="sectors.html" class="on">By sector</a><a href="sizes.html" class="">By size</a><a href="coverage.html" class="">Coverage</a></div></nav>
+<main><div class="crumb"><a href="../sectors.html">By sector</a> &rsaquo;
+  Telecommunications</div>
+<h1 class="pg">Telecommunications</h1>
+<p class="sub">59 companies &middot;
+  1,534,018 employees &middot;
+  $1,279,464M combined revenue.
+  Showing 1&ndash;50.</p>
+<div class="card"><table class="reg">
+<thead><tr><th>Company</th><th>Sector</th><th class="num">Employees</th>
+  <th class="num">Revenue</th><th class="num">Rev / employee</th><th>HQ</th>
+</tr></thead><tbody><tr><td><a href="../company/orange-s-a.html">Orange S.A.</a></td><td>Enterprise</td><td class="num">226,160</td><td class="num">$154,288M</td><td class="num">$682K</td><td>FL</td></tr><tr><td><a href="../company/deutsche-telekom-ag.html">Deutsche Telekom AG</a></td><td>Enterprise</td><td class="num">195,397</td><td class="num">$199,596M</td><td class="num">$1,022K</td><td>GA</td></tr><tr><td><a href="../company/at-t-inc.html">AT&amp;T Inc.</a></td><td>Enterprise</td><td class="num">187,182</td><td class="num">$179,205M</td><td class="num">$957K</td><td>CA</td></tr><tr><td><a href="../company/vodafone-group-plc.html">Vodafone Group Plc</a></td><td>Enterprise</td><td class="num">176,047</td><td class="num">$96,724M</td><td class="num">$549K</td><td>UT</td></tr><tr><td><a href="../company/verizon-communications-inc.html">Verizon Communications Inc.</a></td><td>Enterprise</td><td class="num">175,293</td><td class="num">$164,838M</td><td class="num">$940K</td><td>CA</td></tr><tr><td><a href="../company/charter-communications-inc.html">Charter Communications, Inc.</a></td><td>Enterprise</td><td class="num">145,167</td><td class="num">$140,568M</td><td class="num">$968K</td><td>WA</td></tr><tr><td><a href="../company/t-mobile-us-inc.html">T-Mobile US, Inc.</a></td><td>Enterprise</td><td class="num">139,632</td><td class="num">$103,201M</td><td class="num">$739K</td><td>IL</td></tr><tr><td><a href="../company/bt-group-plc.html">BT Group plc</a></td><td>Enterprise</td><td class="num">97,363</td><td class="num">$105,600M</td><td class="num">$1,085K</td><td>MA</td></tr><tr><td><a href="../company/telef-nica-s-a.html">Telefónica, S.A.</a></td><td>Enterprise</td><td class="num">96,664</td><td class="num">$53,424M</td><td class="num">$553K</td><td>VA</td></tr><tr><td><a href="../company/frontier-communications-parent-inc.html">Frontier Communications Parent, Inc.</a></td><td>Enterprise</td><td class="num">55,613</td><td class="num">$46,622M</td><td class="num">$838K</td><td>PA</td></tr><tr><td><a href="../company/lumen-technologies-inc.html">Lumen Technologies, Inc.</a></td><td>Large</td><td class="num">11,667</td><td class="num">$9,407M</td><td class="num">$806K</td><td>VA</td></tr><tr><td><a href="../company/hesketh-kilbride-communications-oy.html">Hesketh &amp; Kilbride Communications Oy</a></td><td>Large</td><td class="num">5,237</td><td class="num">$4,710M</td><td class="num">$899K</td><td>IL</td></tr><tr><td><a href="../company/vonage-holdings-corp.html">Vonage Holdings Corp.</a></td><td>Mid-market</td><td class="num">4,418</td><td class="num">$4,261M</td><td class="num">$964K</td><td>VA</td></tr><tr><td><a href="../company/bandwidth-inc.html">Bandwidth Inc.</a></td><td>Mid-market</td><td class="num">4,296</td><td class="num">$4,906M</td><td class="num">$1,142K</td><td>PA</td></tr><tr><td><a href="../company/basaltthorpe-networks-ltd.html">Basaltthorpe Networks Ltd</a></td><td>Mid-market</td><td class="num">3,822</td><td class="num">$4,279M</td><td class="num">$1,120K</td><td>UT</td></tr><tr><td><a href="../company/quill-enderby-communications-pbc.html">Quill &amp; Enderby Communications PBC</a></td><td>Mid-market</td><td class="num">2,867</td><td class="num">$1,922M</td><td class="num">$670K</td><td>TX</td></tr><tr><td><a href="../company/rossiter-lanyon-lines-pty-ltd.html">Rossiter &amp; Lanyon Lines Pty Ltd</a></td><td>Mid-market</td><td class="num">1,748</td><td class="num">$1,487M</td><td class="num">$851K</td><td>CO</td></tr><tr><td><a href="../company/flint-telecom-b-v.html">Flint Telecom B.V.</a></td><td>Mid-market</td><td class="num">573</td><td class="num">$594M</td><td class="num">$1,036K</td><td>UT</td></tr><tr><td><a href="../company/mowbray-wood-telecom-b-v.html">Mowbray Wood Telecom B.V.</a></td><td>Mid-market</td><td class="num">569</td><td class="num">$387M</td><td class="num">$681K</td><td>CO</td></tr><tr><td><a href="../company/ashworth-reach-networks-pbc.html">Ashworth Reach Networks PBC</a></td><td>Mid-market</td><td class="num">567</td><td class="num">$470M</td><td class="num">$829K</td><td>CO</td></tr><tr><td><a href="../company/mowbray-telecom-a-s.html">Mowbray Telecom A/S</a></td><td>Small</td><td class="num">425</td><td class="num">$248M</td><td class="num">$585K</td><td>CA</td></tr><tr><td><a href="../company/pembury-zennor-networks-ltd.html">Pembury &amp; Zennor Networks Ltd</a></td><td>Small</td><td class="num">411</td><td class="num">$211M</td><td class="num">$513K</td><td>TX</td></tr><tr><td><a href="../company/amber-networks-as.html">Amber Networks AS</a></td><td>Small</td><td class="num">328</td><td class="num">$318M</td><td class="num">$971K</td><td>CA</td></tr><tr><td><a href="../company/slateford-lines-ab.html">Slateford Lines AB</a></td><td>Small</td><td class="num">308</td><td class="num">$264M</td><td class="num">$856K</td><td>IL</td></tr><tr><td><a href="../company/jessop-ham-networks-pbc.html">Jessop Ham Networks PBC</a></td><td>Small</td><td class="num">303</td><td class="num">$220M</td><td class="num">$727K</td><td>CA</td></tr><tr><td><a href="../company/kestrelbend-lines-s-p-a.html">Kestrelbend Lines S.p.A.</a></td><td>Small</td><td class="num">255</td><td class="num">$236M</td><td class="num">$928K</td><td>PA</td></tr><tr><td><a href="../company/prime-telecom-b-v.html">Prime Telecom B.V.</a></td><td>Small</td><td class="num">222</td><td class="num">$147M</td><td class="num">$662K</td><td>NY</td></tr><tr><td><a href="../company/aspendown-lines-ltd.html">Aspendown Lines Ltd</a></td><td>Small</td><td class="num">185</td><td class="num">$141M</td><td class="num">$763K</td><td>MA</td></tr><tr><td><a href="../company/underwood-connect-llc.html">Underwood Connect LLC</a></td><td>Small</td><td class="num">170</td><td class="num">$179M</td><td class="num">$1,051K</td><td>NJ</td></tr><tr><td><a href="../company/apex-connect-ab.html">Apex Connect AB</a></td><td>Small</td><td class="num">123</td><td class="num">$104M</td><td class="num">$842K</td><td>TX</td></tr><tr><td><a href="../company/yarrow-bend-networks-corporation.html">Yarrow Bend Networks Corporation</a></td><td>Small</td><td class="num">95</td><td class="num">$81M</td><td class="num">$852K</td><td>CA</td></tr><tr><td><a href="../company/zenith-connect-inc.html">Zenith Connect Inc.</a></td><td>Small</td><td class="num">59</td><td class="num">$66M</td><td class="num">$1,112K</td><td>WA</td></tr><tr><td><a href="../company/first-communications-pty-ltd.html">First Communications Pty Ltd</a></td><td>Small</td><td class="num">56</td><td class="num">$29M</td><td class="num">$523K</td><td>PA</td></tr><tr><td><a href="../company/amberstead-networks-b-v.html">Amberstead Networks B.V.</a></td><td>Small</td><td class="num">55</td><td class="num">$53M</td><td class="num">$962K</td><td>TX</td></tr><tr><td><a href="../company/alderfield-networks-llc.html">Alderfield Networks LLC</a></td><td>Small</td><td class="num">52</td><td class="num">$46M</td><td class="num">$891K</td><td>WA</td></tr><tr><td><a href="../company/polaris-communications-limited.html">Polaris Communications Limited</a></td><td>Micro</td><td class="num">50</td><td class="num">$29M</td><td class="num">$580K</td><td>WA</td></tr><tr><td><a href="../company/thistlebrook-networks-oy.html">Thistlebrook Networks Oy</a></td><td>Micro</td><td class="num">49</td><td class="num">$47M</td><td class="num">$964K</td><td>TX</td></tr><tr><td><a href="../company/jessop-fairburn-connect-ab.html">Jessop &amp; Fairburn Connect AB</a></td><td>Micro</td><td class="num">46</td><td class="num">$45M</td><td class="num">$976K</td><td>GA</td></tr><tr><td><a href="../company/jarvis-halloran-telecom-ltd.html">Jarvis &amp; Halloran Telecom Ltd</a></td><td>Micro</td><td class="num">43</td><td class="num">$47M</td><td class="num">$1,095K</td><td>CA</td></tr><tr><td><a href="../company/kilbride-harrow-networks-inc.html">Kilbride &amp; Harrow Networks Inc.</a></td><td>Micro</td><td class="num">42</td><td class="num">$42M</td><td class="num">$1,001K</td><td>FL</td></tr><tr><td><a href="../company/harrow-eriksen-telecom-b-v.html">Harrow &amp; Eriksen Telecom B.V.</a></td><td>Micro</td><td class="num">39</td><td class="num">$38M</td><td class="num">$977K</td><td>NY</td></tr><tr><td><a href="../company/ironbend-networks-pbc.html">Ironbend Networks PBC</a></td><td>Micro</td><td class="num">39</td><td class="num">$39M</td><td class="num">$994K</td><td>PA</td></tr><tr><td><a href="../company/yarrow-gallagher-connect-inc.html">Yarrow &amp; Gallagher Connect Inc.</a></td><td>Micro</td><td class="num">37</td><td class="num">$38M</td><td class="num">$1,034K</td><td>VA</td></tr><tr><td><a href="../company/first-networks-llc.html">First Networks LLC</a></td><td>Micro</td><td class="num">35</td><td class="num">$33M</td><td class="num">$944K</td><td>MA</td></tr><tr><td><a href="../company/quartz-networks-pty-ltd.html">Quartz Networks Pty Ltd</a></td><td>Micro</td><td class="num">33</td><td class="num">$38M</td><td class="num">$1,139K</td><td>WA</td></tr><tr><td><a href="../company/vance-oakeshott-telecom-inc.html">Vance &amp; Oakeshott Telecom Inc.</a></td><td>Micro</td><td class="num">33</td><td class="num">$25M</td><td class="num">$752K</td><td>WA</td></tr><tr><td><a href="../company/smartbiz-telecom-llc.html">Smartbiz Telecom LLC</a></td><td>Micro</td><td class="num">29</td><td class="num">$28M</td><td class="num">$984K</td><td>NJ</td></tr><tr><td><a href="../company/alderbridge-communications-corporation.html">Alderbridge Communications Corporation</a></td><td>Micro</td><td class="num">28</td><td class="num">$27M</td><td class="num">$966K</td><td>GA</td></tr><tr><td><a href="../company/azimuth-communications-plc.html">Azimuth Communications plc</a></td><td>Micro</td><td class="num">27</td><td class="num">$18M</td><td class="num">$664K</td><td>VA</td></tr><tr><td><a href="../company/rossiter-connect-pty-ltd.html">Rossiter Connect Pty Ltd</a></td><td>Micro</td><td class="num">27</td><td class="num">$22M</td><td class="num">$814K</td><td>MA</td></tr></tbody></table></div><div class="pager"><span class="here">1</span><a href="telecommunications-2.html">2</a></div></main>
+<script>
+/* Filters the rows of any table on the page. Deliberately client-side: the site
+   has no backend, and a search that quietly returns nothing would be worse than
+   none at all, so an empty result says so. */
+(function () {
+  var box = document.getElementById("q");
+  if (!box) return;
+  var tables = [].slice.call(document.querySelectorAll("table.reg"));
+  if (!tables.length) return;
+  var msg = document.createElement("div");
+  msg.className = "nohits hidden";
+  msg.textContent = "No company on this page matches that.";
+  (document.querySelector("main") || document.body).appendChild(msg);
+
+  box.addEventListener("input", function () {
+    var q = box.value.trim().toLowerCase(), shown = 0;
+    tables.forEach(function (t) {
+      var rows = [].slice.call(t.tBodies[0] ? t.tBodies[0].rows : []);
+      var vis = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.classList.toggle("hidden", !hit);
+        if (hit) vis++;
+      });
+      shown += vis;
+      var sec = t.closest("section.facet");
+      if (sec) sec.classList.toggle("hidden", q && vis === 0);
+    });
+    msg.classList.toggle("hidden", !(q && shown === 0));
+  });
+})();
+</script>
+<footer><div class="fin">
+  <div class="fcol"><b>Registry</b>
+    <a href="index.html">All companies</a><a href="sectors.html">By sector</a>
+    <a href="sizes.html">By size</a></div>
+  <div class="fcol"><b>Reference</b>
+    <a href="coverage.html">Coverage &amp; methodology</a>
+    <a href="coverage.html#fields">Field definitions</a>
+    <a href="robots.txt">robots.txt</a></div>
+  <div class="fcol"><b>Release</b>
+    <span>Edition 2026.3</span><span>1,000 companies &middot; 15 sectors</span>
+    <span>Last compiled 28 September 2026</span></div>
+  <div class="fbot">Harborline Registry &middot; firmographic reference data.
+    Figures include modeled estimates; see
+    <a href="coverage.html">coverage &amp; methodology</a>. No bulk export.</div>
+</div></footer>
+</body></html>

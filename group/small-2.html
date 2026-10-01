@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Small &mdash; Harborline Registry</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Harborline Registry — firmographic profiles for 1,000 technology and media companies.">
+<style>
+:root{--ink:#101c2c;--ink2:#4a5a6e;--ink3:#8494a6;--rule:#e2e8ef;--paper:#f4f7fa;
+ --surface:#fff;--brand:#0b4f6c;--brand2:#1b9aaa;--warn:#8a4b00;--warn-bg:#fff6e6;
+ --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 var(--sans)}
+a{color:var(--brand)}
+.synth{background:var(--warn-bg);border-bottom:2px solid #f0c98a;color:var(--warn);font-size:13px}
+.synth div{max-width:1000px;margin:0 auto;padding:10px 24px}
+.synth b{color:#6b3a00}
+header.top{background:var(--brand);color:#fff}
+header.top div.in{max-width:1000px;margin:0 auto;padding:16px 24px 14px;
+ display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+header.top .logo{font-size:20px;font-weight:600;letter-spacing:-.02em;color:#fff;
+ text-decoration:none;display:flex;align-items:center;gap:9px}
+header.top .logo span{opacity:.68;font-weight:400}
+header.top .logo .mark{width:17px;height:17px;border-radius:3px;flex:0 0 17px;
+ background:linear-gradient(135deg,var(--brand2) 0 50%,#9fd4dd 50% 100%);
+ box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.find{margin-left:auto}
+.find input{width:252px;max-width:46vw;background:rgba(255,255,255,.13);
+ border:1px solid rgba(255,255,255,.26);border-radius:6px;padding:7px 11px;color:#fff;
+ font:13.5px/1 var(--sans)}
+.find input::placeholder{color:rgba(255,255,255,.62)}
+.find input:focus{outline:none;background:rgba(255,255,255,.2);
+ border-color:rgba(255,255,255,.5)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:0 0 22px}
+.stats > div{background:var(--surface);padding:12px 15px}
+.stats .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:4px}
+.stats .v{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.jump{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 6px;font-size:12.5px}
+.jump a{background:var(--surface);border:1px solid var(--rule);border-radius:14px;
+ padding:4px 11px;text-decoration:none;color:var(--ink2)}
+.jump a:hover{border-color:var(--brand2);color:var(--brand)}
+.facet{margin-top:26px;scroll-margin-top:16px}
+.fhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.fhead h2{font-size:17px;font-weight:600;margin:0;letter-spacing:-.01em}
+.fmeta{font-size:12.5px;color:var(--ink3)}
+.hidden{display:none !important}
+.nohits{padding:28px 4px;color:var(--ink3);font-size:14px}
+footer .fin{max-width:1000px;margin:0 auto;padding:24px 24px 30px;
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px 26px}
+footer .fcol{display:flex;flex-direction:column;gap:5px;font-size:13px}
+footer .fcol b{color:var(--ink2);font-size:11px;letter-spacing:.07em;
+ text-transform:uppercase;margin-bottom:3px}
+footer .fcol a{color:var(--brand);text-decoration:none}
+footer .fcol a:hover{text-decoration:underline}
+footer .fbot{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:14px;
+ font-size:12.5px;color:var(--ink3)}
+nav{background:#08415a;font-size:13.5px}
+nav div{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:#bcd9e5;text-decoration:none;padding:11px 0;display:block}
+nav a:hover,nav a.on{color:#fff;box-shadow:inset 0 -2px 0 var(--brand2)}
+main{max-width:1000px;margin:0 auto;padding:26px 24px 70px}
+h1.pg{font-size:22px;margin:0 0 4px;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--ink2);font-size:13.5px;margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:8px}
+table.reg{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
+table.reg th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+ color:var(--ink3);padding:10px 12px;border-bottom:1px solid var(--rule);white-space:nowrap}
+table.reg td{padding:11px 12px;border-bottom:1px solid var(--rule)}
+table.reg tr:last-child td{border-bottom:0}
+table.reg tr:hover{background:#f8fbfd}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;padding:2px 7px;border-radius:10px;
+ background:#eaf2f6;color:var(--brand);border:1px solid #cfe2eb;white-space:nowrap}
+.pager{margin-top:22px;display:flex;gap:6px;flex-wrap:wrap;font-size:13px}
+.pager a,.pager span{padding:7px 11px;border:1px solid var(--rule);background:var(--surface);
+ text-decoration:none;color:var(--ink2);border-radius:5px}
+.pager .here{background:var(--brand);border-color:var(--brand);color:#fff}
+.prof{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:18px 0 22px}
+.prof > div{background:var(--surface);padding:13px 15px}
+.prof .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:5px}
+.prof .v{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.prof .v small{font-size:12px;font-weight:400;color:var(--ink2)}
+dl.fields{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:8px;
+ overflow:hidden}
+dl.fields div{display:flex;gap:16px;padding:10px 15px;border-bottom:1px solid var(--rule);
+ font-size:14px}
+dl.fields div:last-child{border-bottom:0}
+dl.fields dt{width:220px;flex:0 0 220px;color:var(--ink2)}
+dl.fields dd{margin:0}
+.aka{background:#f8fbfd;border:1px dashed #cfe2eb;border-radius:8px;padding:12px 15px;
+ font-size:13.5px;margin:0 0 20px}
+.aka code{background:#fff;border:1px solid var(--rule);border-radius:4px;padding:1px 6px;
+ font-size:12.5px}
+.crumb{font-size:12.5px;color:var(--ink3);margin-bottom:14px}
+footer{border-top:1px solid var(--rule);background:var(--surface);font-size:12.5px;
+ color:var(--ink3)}
+footer div{max-width:1000px;margin:0 auto;padding:20px 24px 34px}
+@media(max-width:640px){dl.fields div{flex-direction:column;gap:2px}
+ dl.fields dt{flex:none;width:auto}}
+</style></head><body>
+
+<header class="top"><div class="in">
+  <a class="logo" href="index.html"><span class="mark"></span>Harborline
+    <span>Registry</span></a>
+  <form class="find" onsubmit="return false"><input id="q" type="search"
+    placeholder="Search 1,000 companies" autocomplete="off" aria-label="Search companies"></form>
+</div></header>
+<nav><div><a href="index.html" class="">Registry</a><a href="sectors.html" class="">By sector</a><a href="sizes.html" class="on">By size</a><a href="coverage.html" class="">Coverage</a></div></nav>
+<main><div class="crumb"><a href="../sizes.html">By size band</a> &rsaquo;
+  Small</div>
+<h1 class="pg">Small</h1>
+<p class="sub">304 companies &middot;
+  68,326 employees &middot;
+  $55,144M combined revenue.
+  Showing 51&ndash;100.</p>
+<div class="card"><table class="reg">
+<thead><tr><th>Company</th><th>Size band</th><th class="num">Employees</th>
+  <th class="num">Revenue</th><th class="num">Rev / employee</th><th>HQ</th>
+</tr></thead><tbody><tr><td><a href="../company/udemy-inc.html">Udemy, Inc.</a></td><td>Media &amp; publishing</td><td class="num">411</td><td class="num">$109M</td><td class="num">$264K</td><td>NJ</td></tr><tr><td><a href="../company/linode-llc.html">Linode LLC</a></td><td>Cloud infrastructure</td><td class="num">410</td><td class="num">$334M</td><td class="num">$815K</td><td>TX</td></tr><tr><td><a href="../company/vertexfield-content-group-a-s.html">Vertexfield Content Group A/S</a></td><td>Adult content</td><td class="num">410</td><td class="num">$751M</td><td class="num">$1,832K</td><td>IL</td></tr><tr><td><a href="../company/faulkner-inchbald-feedback-s-a.html">Faulkner &amp; Inchbald Feedback S.A.</a></td><td>Reviews &amp; ratings</td><td class="num">406</td><td class="num">$106M</td><td class="num">$261K</td><td>PA</td></tr><tr><td><a href="../company/kestrelthwaite-journal-pty-ltd.html">Kestrelthwaite Journal Pty Ltd</a></td><td>Media &amp; publishing</td><td class="num">406</td><td class="num">$149M</td><td class="num">$368K</td><td>CA</td></tr><tr><td><a href="../company/curlew-survey-b-v.html">Curlew Survey B.V.</a></td><td>Reviews &amp; ratings</td><td class="num">405</td><td class="num">$126M</td><td class="num">$312K</td><td>GA</td></tr><tr><td><a href="../company/jasperworth-exchange-ltd.html">Jasperworth Exchange Ltd</a></td><td>Online marketplace</td><td class="num">402</td><td class="num">$435M</td><td class="num">$1,083K</td><td>UT</td></tr><tr><td><a href="../company/scribd-inc.html">Scribd, Inc.</a></td><td>Media &amp; publishing</td><td class="num">399</td><td class="num">$73M</td><td class="num">$184K</td><td>UT</td></tr><tr><td><a href="../company/first-studios-pbc.html">First Studios PBC</a></td><td>Gaming</td><td class="num">398</td><td class="num">$234M</td><td class="num">$588K</td><td>CO</td></tr><tr><td><a href="../company/riverhead-interactive-co.html">Riverhead Interactive Co.</a></td><td>Gaming</td><td class="num">398</td><td class="num">$150M</td><td class="num">$376K</td><td>CO</td></tr><tr><td><a href="../company/kayak-software-corporation.html">Kayak Software Corporation</a></td><td>Travel &amp; hospitality</td><td class="num">397</td><td class="num">$269M</td><td class="num">$678K</td><td>CA</td></tr><tr><td><a href="../company/a-place-for-rover-inc.html">A Place for Rover, Inc.</a></td><td>Online marketplace</td><td class="num">396</td><td class="num">$540M</td><td class="num">$1,364K</td><td>MA</td></tr><tr><td><a href="../company/nantucket-lanyon-carriers-pbc.html">Nantucket &amp; Lanyon Carriers PBC</a></td><td>Logistics</td><td class="num">395</td><td class="num">$75M</td><td class="num">$189K</td><td>MA</td></tr><tr><td><a href="../company/blackwood-travel-pbc.html">Blackwood Travel PBC</a></td><td>Travel &amp; hospitality</td><td class="num">392</td><td class="num">$242M</td><td class="num">$618K</td><td>PA</td></tr><tr><td><a href="../company/doradolinn-hospitality-a-s.html">Doradolinn Hospitality A/S</a></td><td>Travel &amp; hospitality</td><td class="num">389</td><td class="num">$144M</td><td class="num">$370K</td><td>TX</td></tr><tr><td><a href="../company/redwater-survey-s-p-a.html">Redwater Survey S.p.A.</a></td><td>Reviews &amp; ratings</td><td class="num">387</td><td class="num">$132M</td><td class="num">$340K</td><td>MA</td></tr><tr><td><a href="../company/heron-community-inc.html">Heron Community Inc.</a></td><td>Social platform</td><td class="num">383</td><td class="num">$622M</td><td class="num">$1,625K</td><td>GA</td></tr><tr><td><a href="../company/brightham-editions-s-a.html">Brightham Editions S.A.</a></td><td>Media &amp; publishing</td><td class="num">374</td><td class="num">$166M</td><td class="num">$443K</td><td>CO</td></tr><tr><td><a href="../company/jasper-solutions-llc.html">Jasper Solutions LLC</a></td><td>Enterprise software</td><td class="num">374</td><td class="num">$203M</td><td class="num">$543K</td><td>CA</td></tr><tr><td><a href="../company/okonjo-brook-collective-llc.html">Okonjo Brook Collective LLC</a></td><td>Social platform</td><td class="num">374</td><td class="num">$506M</td><td class="num">$1,354K</td><td>NJ</td></tr><tr><td><a href="../company/thistleholm-interactive-inc.html">Thistleholm Interactive Inc.</a></td><td>Social platform</td><td class="num">373</td><td class="num">$426M</td><td class="num">$1,141K</td><td>NJ</td></tr><tr><td><a href="../company/calloway-travel-s-a.html">Calloway Travel S.A.</a></td><td>Travel &amp; hospitality</td><td class="num">370</td><td class="num">$242M</td><td class="num">$655K</td><td>CA</td></tr><tr><td><a href="../company/silver-instruments-corporation.html">Silver Instruments Corporation</a></td><td>Consumer devices</td><td class="num">364</td><td class="num">$536M</td><td class="num">$1,472K</td><td>NC</td></tr><tr><td><a href="../company/fastly-inc.html">Fastly, Inc.</a></td><td>Cloud infrastructure</td><td class="num">362</td><td class="num">$168M</td><td class="num">$463K</td><td>IL</td></tr><tr><td><a href="../company/wrenbury-devices-inc.html">Wrenbury Devices Inc.</a></td><td>Consumer devices</td><td class="num">361</td><td class="num">$760M</td><td class="num">$2,106K</td><td>NJ</td></tr><tr><td><a href="../company/hostelworld-group-plc.html">Hostelworld Group plc</a></td><td>Travel &amp; hospitality</td><td class="num">360</td><td class="num">$249M</td><td class="num">$691K</td><td>MA</td></tr><tr><td><a href="../company/fairburn-cresswell-logistics-co.html">Fairburn &amp; Cresswell Logistics Co.</a></td><td>Logistics</td><td class="num">359</td><td class="num">$102M</td><td class="num">$283K</td><td>FL</td></tr><tr><td><a href="../company/gopro-inc.html">GoPro, Inc.</a></td><td>Consumer devices</td><td class="num">356</td><td class="num">$586M</td><td class="num">$1,645K</td><td>TX</td></tr><tr><td><a href="../company/hammy-media-ltd.html">Hammy Media Ltd.</a></td><td>Adult content</td><td class="num">354</td><td class="num">$707M</td><td class="num">$1,996K</td><td>CO</td></tr><tr><td><a href="../company/marchetti-tancred-freight-pty-ltd.html">Marchetti &amp; Tancred Freight Pty Ltd</a></td><td>Logistics</td><td class="num">353</td><td class="num">$80M</td><td class="num">$227K</td><td>NC</td></tr><tr><td><a href="../company/webgroup-czech-republic-a-s.html">WebGroup Czech Republic, a.s.</a></td><td>Adult content</td><td class="num">351</td><td class="num">$487M</td><td class="num">$1,387K</td><td>NY</td></tr><tr><td><a href="../company/vale-community-limited.html">Vale Community Limited</a></td><td>Social platform</td><td class="num">348</td><td class="num">$630M</td><td class="num">$1,811K</td><td>FL</td></tr><tr><td><a href="../company/khan-academy-inc.html">Khan Academy, Inc.</a></td><td>Media &amp; publishing</td><td class="num">346</td><td class="num">$54M</td><td class="num">$156K</td><td>PA</td></tr><tr><td><a href="../company/prime-financial-as.html">Prime Financial AS</a></td><td>Financial technology</td><td class="num">346</td><td class="num">$215M</td><td class="num">$622K</td><td>PA</td></tr><tr><td><a href="../company/gallagher-penhale-survey-plc.html">Gallagher &amp; Penhale Survey plc</a></td><td>Reviews &amp; ratings</td><td class="num">341</td><td class="num">$103M</td><td class="num">$302K</td><td>CO</td></tr><tr><td><a href="../company/marchetti-quill-networks-b-v.html">Marchetti &amp; Quill Networks B.V.</a></td><td>Social platform</td><td class="num">340</td><td class="num">$533M</td><td class="num">$1,567K</td><td>UT</td></tr><tr><td><a href="../company/heronfell-journeys-gmbh.html">Heronfell Journeys GmbH</a></td><td>Travel &amp; hospitality</td><td class="num">339</td><td class="num">$115M</td><td class="num">$339K</td><td>VA</td></tr><tr><td><a href="../company/red-capital-b-v.html">Red Capital B.V.</a></td><td>Financial technology</td><td class="num">337</td><td class="num">$253M</td><td class="num">$750K</td><td>NC</td></tr><tr><td><a href="../company/box-inc.html">Box, Inc.</a></td><td>Cloud infrastructure</td><td class="num">333</td><td class="num">$219M</td><td class="num">$657K</td><td>WA</td></tr><tr><td><a href="../company/harborpoint-technologies-inc.html">Harborpoint Technologies Inc.</a></td><td>Enterprise software</td><td class="num">329</td><td class="num">$190M</td><td class="num">$578K</td><td>NJ</td></tr><tr><td><a href="../company/amber-networks-as.html">Amber Networks AS</a></td><td>Telecommunications</td><td class="num">328</td><td class="num">$318M</td><td class="num">$971K</td><td>CA</td></tr><tr><td><a href="../company/vale-logistics-s-p-a.html">Vale Logistics S.p.A.</a></td><td>Logistics</td><td class="num">322</td><td class="num">$56M</td><td class="num">$175K</td><td>NC</td></tr><tr><td><a href="../company/rumble-inc.html">Rumble Inc.</a></td><td>Social platform</td><td class="num">319</td><td class="num">$319M</td><td class="num">$1,001K</td><td>GA</td></tr><tr><td><a href="../company/thumbtack-inc.html">Thumbtack, Inc.</a></td><td>Online marketplace</td><td class="num">319</td><td class="num">$334M</td><td class="num">$1,047K</td><td>CA</td></tr><tr><td><a href="../company/carinastead-search-inc.html">Carinastead Search Inc.</a></td><td>Search &amp; advertising</td><td class="num">315</td><td class="num">$516M</td><td class="num">$1,637K</td><td>FL</td></tr><tr><td><a href="../company/ironwick-collective-s-p-a.html">Ironwick Collective S.p.A.</a></td><td>Social platform</td><td class="num">310</td><td class="num">$381M</td><td class="num">$1,228K</td><td>FL</td></tr><tr><td><a href="../company/slateford-lines-ab.html">Slateford Lines AB</a></td><td>Telecommunications</td><td class="num">308</td><td class="num">$264M</td><td class="num">$856K</td><td>IL</td></tr><tr><td><a href="../company/wrenbury-fairburn-labs-corporation.html">Wrenbury &amp; Fairburn Labs Corporation</a></td><td>Enterprise software</td><td class="num">304</td><td class="num">$140M</td><td class="num">$462K</td><td>UT</td></tr><tr><td><a href="../company/jessop-ham-networks-pbc.html">Jessop Ham Networks PBC</a></td><td>Telecommunications</td><td class="num">303</td><td class="num">$220M</td><td class="num">$727K</td><td>CA</td></tr><tr><td><a href="../company/faire-wholesale-inc.html">Faire Wholesale, Inc.</a></td><td>Online marketplace</td><td class="num">302</td><td class="num">$185M</td><td class="num">$612K</td><td>NY</td></tr></tbody></table></div><div class="pager"><a href="small.html">1</a><span class="here">2</span><a href="small-3.html">3</a><a href="small-4.html">4</a><a href="small-5.html">5</a><a href="small-6.html">6</a><a href="small-7.html">7</a></div></main>
+<script>
+/* Filters the rows of any table on the page. Deliberately client-side: the site
+   has no backend, and a search that quietly returns nothing would be worse than
+   none at all, so an empty result says so. */
+(function () {
+  var box = document.getElementById("q");
+  if (!box) return;
+  var tables = [].slice.call(document.querySelectorAll("table.reg"));
+  if (!tables.length) return;
+  var msg = document.createElement("div");
+  msg.className = "nohits hidden";
+  msg.textContent = "No company on this page matches that.";
+  (document.querySelector("main") || document.body).appendChild(msg);
+
+  box.addEventListener("input", function () {
+    var q = box.value.trim().toLowerCase(), shown = 0;
+    tables.forEach(function (t) {
+      var rows = [].slice.call(t.tBodies[0] ? t.tBodies[0].rows : []);
+      var vis = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.classList.toggle("hidden", !hit);
+        if (hit) vis++;
+      });
+      shown += vis;
+      var sec = t.closest("section.facet");
+      if (sec) sec.classList.toggle("hidden", q && vis === 0);
+    });
+    msg.classList.toggle("hidden", !(q && shown === 0));
+  });
+})();
+</script>
+<footer><div class="fin">
+  <div class="fcol"><b>Registry</b>
+    <a href="index.html">All companies</a><a href="sectors.html">By sector</a>
+    <a href="sizes.html">By size</a></div>
+  <div class="fcol"><b>Reference</b>
+    <a href="coverage.html">Coverage &amp; methodology</a>
+    <a href="coverage.html#fields">Field definitions</a>
+    <a href="robots.txt">robots.txt</a></div>
+  <div class="fcol"><b>Release</b>
+    <span>Edition 2026.3</span><span>1,000 companies &middot; 15 sectors</span>
+    <span>Last compiled 28 September 2026</span></div>
+  <div class="fbot">Harborline Registry &middot; firmographic reference data.
+    Figures include modeled estimates; see
+    <a href="coverage.html">coverage &amp; methodology</a>. No bulk export.</div>
+</div></footer>
+</body></html>

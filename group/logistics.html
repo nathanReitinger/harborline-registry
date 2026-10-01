@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Logistics &mdash; Harborline Registry</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Harborline Registry — firmographic profiles for 1,000 technology and media companies.">
+<style>
+:root{--ink:#101c2c;--ink2:#4a5a6e;--ink3:#8494a6;--rule:#e2e8ef;--paper:#f4f7fa;
+ --surface:#fff;--brand:#0b4f6c;--brand2:#1b9aaa;--warn:#8a4b00;--warn-bg:#fff6e6;
+ --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 var(--sans)}
+a{color:var(--brand)}
+.synth{background:var(--warn-bg);border-bottom:2px solid #f0c98a;color:var(--warn);font-size:13px}
+.synth div{max-width:1000px;margin:0 auto;padding:10px 24px}
+.synth b{color:#6b3a00}
+header.top{background:var(--brand);color:#fff}
+header.top div.in{max-width:1000px;margin:0 auto;padding:16px 24px 14px;
+ display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+header.top .logo{font-size:20px;font-weight:600;letter-spacing:-.02em;color:#fff;
+ text-decoration:none;display:flex;align-items:center;gap:9px}
+header.top .logo span{opacity:.68;font-weight:400}
+header.top .logo .mark{width:17px;height:17px;border-radius:3px;flex:0 0 17px;
+ background:linear-gradient(135deg,var(--brand2) 0 50%,#9fd4dd 50% 100%);
+ box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.find{margin-left:auto}
+.find input{width:252px;max-width:46vw;background:rgba(255,255,255,.13);
+ border:1px solid rgba(255,255,255,.26);border-radius:6px;padding:7px 11px;color:#fff;
+ font:13.5px/1 var(--sans)}
+.find input::placeholder{color:rgba(255,255,255,.62)}
+.find input:focus{outline:none;background:rgba(255,255,255,.2);
+ border-color:rgba(255,255,255,.5)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:0 0 22px}
+.stats > div{background:var(--surface);padding:12px 15px}
+.stats .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:4px}
+.stats .v{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.jump{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 6px;font-size:12.5px}
+.jump a{background:var(--surface);border:1px solid var(--rule);border-radius:14px;
+ padding:4px 11px;text-decoration:none;color:var(--ink2)}
+.jump a:hover{border-color:var(--brand2);color:var(--brand)}
+.facet{margin-top:26px;scroll-margin-top:16px}
+.fhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.fhead h2{font-size:17px;font-weight:600;margin:0;letter-spacing:-.01em}
+.fmeta{font-size:12.5px;color:var(--ink3)}
+.hidden{display:none !important}
+.nohits{padding:28px 4px;color:var(--ink3);font-size:14px}
+footer .fin{max-width:1000px;margin:0 auto;padding:24px 24px 30px;
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px 26px}
+footer .fcol{display:flex;flex-direction:column;gap:5px;font-size:13px}
+footer .fcol b{color:var(--ink2);font-size:11px;letter-spacing:.07em;
+ text-transform:uppercase;margin-bottom:3px}
+footer .fcol a{color:var(--brand);text-decoration:none}
+footer .fcol a:hover{text-decoration:underline}
+footer .fbot{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:14px;
+ font-size:12.5px;color:var(--ink3)}
+nav{background:#08415a;font-size:13.5px}
+nav div{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:#bcd9e5;text-decoration:none;padding:11px 0;display:block}
+nav a:hover,nav a.on{color:#fff;box-shadow:inset 0 -2px 0 var(--brand2)}
+main{max-width:1000px;margin:0 auto;padding:26px 24px 70px}
+h1.pg{font-size:22px;margin:0 0 4px;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--ink2);font-size:13.5px;margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:8px}
+table.reg{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
+table.reg th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+ color:var(--ink3);padding:10px 12px;border-bottom:1px solid var(--rule);white-space:nowrap}
+table.reg td{padding:11px 12px;border-bottom:1px solid var(--rule)}
+table.reg tr:last-child td{border-bottom:0}
+table.reg tr:hover{background:#f8fbfd}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;padding:2px 7px;border-radius:10px;
+ background:#eaf2f6;color:var(--brand);border:1px solid #cfe2eb;white-space:nowrap}
+.pager{margin-top:22px;display:flex;gap:6px;flex-wrap:wrap;font-size:13px}
+.pager a,.pager span{padding:7px 11px;border:1px solid var(--rule);background:var(--surface);
+ text-decoration:none;color:var(--ink2);border-radius:5px}
+.pager .here{background:var(--brand);border-color:var(--brand);color:#fff}
+.prof{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:18px 0 22px}
+.prof > div{background:var(--surface);padding:13px 15px}
+.prof .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:5px}
+.prof .v{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.prof .v small{font-size:12px;font-weight:400;color:var(--ink2)}
+dl.fields{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:8px;
+ overflow:hidden}
+dl.fields div{display:flex;gap:16px;padding:10px 15px;border-bottom:1px solid var(--rule);
+ font-size:14px}
+dl.fields div:last-child{border-bottom:0}
+dl.fields dt{width:220px;flex:0 0 220px;color:var(--ink2)}
+dl.fields dd{margin:0}
+.aka{background:#f8fbfd;border:1px dashed #cfe2eb;border-radius:8px;padding:12px 15px;
+ font-size:13.5px;margin:0 0 20px}
+.aka code{background:#fff;border:1px solid var(--rule);border-radius:4px;padding:1px 6px;
+ font-size:12.5px}
+.crumb{font-size:12.5px;color:var(--ink3);margin-bottom:14px}
+footer{border-top:1px solid var(--rule);background:var(--surface);font-size:12.5px;
+ color:var(--ink3)}
+footer div{max-width:1000px;margin:0 auto;padding:20px 24px 34px}
+@media(max-width:640px){dl.fields div{flex-direction:column;gap:2px}
+ dl.fields dt{flex:none;width:auto}}
+</style></head><body>
+
+<header class="top"><div class="in">
+  <a class="logo" href="index.html"><span class="mark"></span>Harborline
+    <span>Registry</span></a>
+  <form class="find" onsubmit="return false"><input id="q" type="search"
+    placeholder="Search 1,000 companies" autocomplete="off" aria-label="Search companies"></form>
+</div></header>
+<nav><div><a href="index.html" class="">Registry</a><a href="sectors.html" class="on">By sector</a><a href="sizes.html" class="">By size</a><a href="coverage.html" class="">Coverage</a></div></nav>
+<main><div class="crumb"><a href="../sectors.html">By sector</a> &rsaquo;
+  Logistics</div>
+<h1 class="pg">Logistics</h1>
+<p class="sub">60 companies &middot;
+  1,010,727 employees &middot;
+  $259,658M combined revenue.
+  Showing 1&ndash;50.</p>
+<div class="card"><table class="reg">
+<thead><tr><th>Company</th><th>Sector</th><th class="num">Employees</th>
+  <th class="num">Revenue</th><th class="num">Rev / employee</th><th>HQ</th>
+</tr></thead><tbody><tr><td><a href="../company/fedex-corporation.html">FedEx Corporation</a></td><td>Enterprise</td><td class="num">216,166</td><td class="num">$58,242M</td><td class="num">$269K</td><td>FL</td></tr><tr><td><a href="../company/uber-technologies-inc.html">Uber Technologies, Inc.</a></td><td>Enterprise</td><td class="num">196,477</td><td class="num">$48,232M</td><td class="num">$246K</td><td>WA</td></tr><tr><td><a href="../company/xpo-inc.html">XPO, Inc.</a></td><td>Enterprise</td><td class="num">171,473</td><td class="num">$53,654M</td><td class="num">$313K</td><td>UT</td></tr><tr><td><a href="../company/dhl-group.html">DHL Group</a></td><td>Enterprise</td><td class="num">131,058</td><td class="num">$34,897M</td><td class="num">$266K</td><td>FL</td></tr><tr><td><a href="../company/united-parcel-service-inc.html">United Parcel Service, Inc.</a></td><td>Enterprise</td><td class="num">80,822</td><td class="num">$16,398M</td><td class="num">$203K</td><td>CO</td></tr><tr><td><a href="../company/doordash-inc.html">DoorDash, Inc.</a></td><td>Enterprise</td><td class="num">60,459</td><td class="num">$14,093M</td><td class="num">$233K</td><td>UT</td></tr><tr><td><a href="../company/deliveroo-plc.html">Deliveroo plc</a></td><td>Large</td><td class="num">29,855</td><td class="num">$9,378M</td><td class="num">$314K</td><td>WA</td></tr><tr><td><a href="../company/gopuff-inc.html">Gopuff, Inc.</a></td><td>Large</td><td class="num">24,965</td><td class="num">$3,043M</td><td class="num">$122K</td><td>NC</td></tr><tr><td><a href="../company/instacart-inc.html">Instacart, Inc.</a></td><td>Large</td><td class="num">22,142</td><td class="num">$5,791M</td><td class="num">$262K</td><td>CO</td></tr><tr><td><a href="../company/just-eat-takeaway-com-n-v.html">Just Eat Takeaway.com N.V.</a></td><td>Large</td><td class="num">18,680</td><td class="num">$2,895M</td><td class="num">$155K</td><td>NC</td></tr><tr><td><a href="../company/brightmoor-dispatch-oy.html">Brightmoor Dispatch Oy</a></td><td>Large</td><td class="num">5,658</td><td class="num">$1,310M</td><td class="num">$232K</td><td>VA</td></tr><tr><td><a href="../company/eriksen-rackham-haulage-corporation.html">Eriksen &amp; Rackham Haulage Corporation</a></td><td>Large</td><td class="num">5,574</td><td class="num">$1,220M</td><td class="num">$219K</td><td>MA</td></tr><tr><td><a href="../company/zenith-logistics-s-p-a.html">Zenith Logistics S.p.A.</a></td><td>Large</td><td class="num">5,471</td><td class="num">$1,567M</td><td class="num">$286K</td><td>NJ</td></tr><tr><td><a href="../company/kestrelfell-freight-as.html">Kestrelfell Freight AS</a></td><td>Large</td><td class="num">5,415</td><td class="num">$1,080M</td><td class="num">$199K</td><td>MA</td></tr><tr><td><a href="../company/penhale-deakin-haulage-as.html">Penhale &amp; Deakin Haulage AS</a></td><td>Large</td><td class="num">5,137</td><td class="num">$883M</td><td class="num">$172K</td><td>FL</td></tr><tr><td><a href="../company/lime-technology-inc.html">Lime Technology, Inc.</a></td><td>Large</td><td class="num">5,068</td><td class="num">$928M</td><td class="num">$183K</td><td>CA</td></tr><tr><td><a href="../company/carinamoor-logistics-gmbh.html">Carinamoor Logistics GmbH</a></td><td>Mid-market</td><td class="num">4,770</td><td class="num">$978M</td><td class="num">$205K</td><td>IL</td></tr><tr><td><a href="../company/lyft-inc.html">Lyft, Inc.</a></td><td>Mid-market</td><td class="num">3,673</td><td class="num">$908M</td><td class="num">$247K</td><td>CA</td></tr><tr><td><a href="../company/tucana-haulage-gmbh.html">Tucana Haulage GmbH</a></td><td>Mid-market</td><td class="num">2,461</td><td class="num">$748M</td><td class="num">$304K</td><td>GA</td></tr><tr><td><a href="../company/faulkner-fell-dispatch-oy.html">Faulkner Fell Dispatch Oy</a></td><td>Mid-market</td><td class="num">2,172</td><td class="num">$668M</td><td class="num">$308K</td><td>TX</td></tr><tr><td><a href="../company/blackgate-haulage-pty-ltd.html">Blackgate Haulage Pty Ltd</a></td><td>Mid-market</td><td class="num">2,132</td><td class="num">$391M</td><td class="num">$184K</td><td>UT</td></tr><tr><td><a href="../company/grubhub-inc.html">Grubhub Inc.</a></td><td>Mid-market</td><td class="num">1,819</td><td class="num">$310M</td><td class="num">$170K</td><td>WA</td></tr><tr><td><a href="../company/kestrelbury-dispatch-co.html">Kestrelbury Dispatch Co.</a></td><td>Mid-market</td><td class="num">1,406</td><td class="num">$190M</td><td class="num">$135K</td><td>CA</td></tr><tr><td><a href="../company/flexport-inc.html">Flexport, Inc.</a></td><td>Mid-market</td><td class="num">1,004</td><td class="num">$311M</td><td class="num">$310K</td><td>NC</td></tr><tr><td><a href="../company/silvermouth-logistics-llp.html">Silvermouth Logistics LLP</a></td><td>Mid-market</td><td class="num">558</td><td class="num">$157M</td><td class="num">$281K</td><td>UT</td></tr><tr><td><a href="../company/thistletarn-dispatch-inc.html">Thistletarn Dispatch Inc.</a></td><td>Mid-market</td><td class="num">556</td><td class="num">$108M</td><td class="num">$194K</td><td>WA</td></tr><tr><td><a href="../company/prime-logistics-limited.html">Prime Logistics Limited</a></td><td>Mid-market</td><td class="num">531</td><td class="num">$103M</td><td class="num">$193K</td><td>WA</td></tr><tr><td><a href="../company/kestrelthwaite-dispatch-a-s.html">Kestrelthwaite Dispatch A/S</a></td><td>Small</td><td class="num">461</td><td class="num">$74M</td><td class="num">$160K</td><td>VA</td></tr><tr><td><a href="../company/convoy-inc.html">Convoy Inc.</a></td><td>Small</td><td class="num">460</td><td class="num">$114M</td><td class="num">$247K</td><td>PA</td></tr><tr><td><a href="../company/north-carriers-limited.html">North Carriers Limited</a></td><td>Small</td><td class="num">447</td><td class="num">$118M</td><td class="num">$263K</td><td>MA</td></tr><tr><td><a href="../company/plover-logistics-llc.html">Plover Logistics LLC</a></td><td>Small</td><td class="num">438</td><td class="num">$135M</td><td class="num">$308K</td><td>FL</td></tr><tr><td><a href="../company/bird-global-inc.html">Bird Global, Inc.</a></td><td>Small</td><td class="num">427</td><td class="num">$54M</td><td class="num">$127K</td><td>UT</td></tr><tr><td><a href="../company/nantucket-lanyon-carriers-pbc.html">Nantucket &amp; Lanyon Carriers PBC</a></td><td>Small</td><td class="num">395</td><td class="num">$75M</td><td class="num">$189K</td><td>MA</td></tr><tr><td><a href="../company/fairburn-cresswell-logistics-co.html">Fairburn &amp; Cresswell Logistics Co.</a></td><td>Small</td><td class="num">359</td><td class="num">$102M</td><td class="num">$283K</td><td>FL</td></tr><tr><td><a href="../company/marchetti-tancred-freight-pty-ltd.html">Marchetti &amp; Tancred Freight Pty Ltd</a></td><td>Small</td><td class="num">353</td><td class="num">$80M</td><td class="num">$227K</td><td>NC</td></tr><tr><td><a href="../company/vale-logistics-s-p-a.html">Vale Logistics S.p.A.</a></td><td>Small</td><td class="num">322</td><td class="num">$56M</td><td class="num">$175K</td><td>NC</td></tr><tr><td><a href="../company/greyham-dispatch-b-v.html">Greyham Dispatch B.V.</a></td><td>Small</td><td class="num">284</td><td class="num">$60M</td><td class="num">$210K</td><td>NC</td></tr><tr><td><a href="../company/gmb-transport-inc.html">GMB Transport, Inc.</a></td><td>Small</td><td class="num">245</td><td class="num">$72M</td><td class="num">$295K</td><td>CO</td></tr><tr><td><a href="../company/pettigrew-haulage-ltd.html">Pettigrew Haulage Ltd</a></td><td>Small</td><td class="num">228</td><td class="num">$57M</td><td class="num">$251K</td><td>NC</td></tr><tr><td><a href="../company/rossiter-oakeshott-freight-llp.html">Rossiter &amp; Oakeshott Freight LLP</a></td><td>Small</td><td class="num">157</td><td class="num">$49M</td><td class="num">$314K</td><td>UT</td></tr><tr><td><a href="../company/firstdown-carriers-limited.html">Firstdown Carriers Limited</a></td><td>Small</td><td class="num">60</td><td class="num">$15M</td><td class="num">$257K</td><td>CA</td></tr><tr><td><a href="../company/redford-logistics-ab.html">Redford Logistics AB</a></td><td>Small</td><td class="num">60</td><td class="num">$9M</td><td class="num">$151K</td><td>VA</td></tr><tr><td><a href="../company/brennan-jarvis-carriers-co.html">Brennan &amp; Jarvis Carriers Co.</a></td><td>Small</td><td class="num">51</td><td class="num">$11M</td><td class="num">$215K</td><td>CA</td></tr><tr><td><a href="../company/silverfell-freight-pty-ltd.html">Silverfell Freight Pty Ltd</a></td><td>Micro</td><td class="num">41</td><td class="num">$7M</td><td class="num">$161K</td><td>NJ</td></tr><tr><td><a href="../company/calloway-water-haulage-corporation.html">Calloway Water Haulage Corporation</a></td><td>Micro</td><td class="num">39</td><td class="num">$10M</td><td class="num">$244K</td><td>VA</td></tr><tr><td><a href="../company/cresswell-lanyon-carriers-corporation.html">Cresswell &amp; Lanyon Carriers Corporation</a></td><td>Micro</td><td class="num">39</td><td class="num">$6M</td><td class="num">$142K</td><td>UT</td></tr><tr><td><a href="../company/rowan-carriers-as.html">Rowan Carriers AS</a></td><td>Micro</td><td class="num">37</td><td class="num">$5M</td><td class="num">$130K</td><td>IL</td></tr><tr><td><a href="../company/uxbridge-drummond-dispatch-corporation.html">Uxbridge &amp; Drummond Dispatch Corporation</a></td><td>Micro</td><td class="num">35</td><td class="num">$5M</td><td class="num">$152K</td><td>VA</td></tr><tr><td><a href="../company/hesketh-fairburn-dispatch-ab.html">Hesketh &amp; Fairburn Dispatch AB</a></td><td>Micro</td><td class="num">33</td><td class="num">$6M</td><td class="num">$195K</td><td>UT</td></tr><tr><td><a href="../company/ainsworth-by-freight-pty-ltd.html">Ainsworth By Freight Pty Ltd</a></td><td>Micro</td><td class="num">30</td><td class="num">$7M</td><td class="num">$222K</td><td>MA</td></tr></tbody></table></div><div class="pager"><span class="here">1</span><a href="logistics-2.html">2</a></div></main>
+<script>
+/* Filters the rows of any table on the page. Deliberately client-side: the site
+   has no backend, and a search that quietly returns nothing would be worse than
+   none at all, so an empty result says so. */
+(function () {
+  var box = document.getElementById("q");
+  if (!box) return;
+  var tables = [].slice.call(document.querySelectorAll("table.reg"));
+  if (!tables.length) return;
+  var msg = document.createElement("div");
+  msg.className = "nohits hidden";
+  msg.textContent = "No company on this page matches that.";
+  (document.querySelector("main") || document.body).appendChild(msg);
+
+  box.addEventListener("input", function () {
+    var q = box.value.trim().toLowerCase(), shown = 0;
+    tables.forEach(function (t) {
+      var rows = [].slice.call(t.tBodies[0] ? t.tBodies[0].rows : []);
+      var vis = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.classList.toggle("hidden", !hit);
+        if (hit) vis++;
+      });
+      shown += vis;
+      var sec = t.closest("section.facet");
+      if (sec) sec.classList.toggle("hidden", q && vis === 0);
+    });
+    msg.classList.toggle("hidden", !(q && shown === 0));
+  });
+})();
+</script>
+<footer><div class="fin">
+  <div class="fcol"><b>Registry</b>
+    <a href="index.html">All companies</a><a href="sectors.html">By sector</a>
+    <a href="sizes.html">By size</a></div>
+  <div class="fcol"><b>Reference</b>
+    <a href="coverage.html">Coverage &amp; methodology</a>
+    <a href="coverage.html#fields">Field definitions</a>
+    <a href="robots.txt">robots.txt</a></div>
+  <div class="fcol"><b>Release</b>
+    <span>Edition 2026.3</span><span>1,000 companies &middot; 15 sectors</span>
+    <span>Last compiled 28 September 2026</span></div>
+  <div class="fbot">Harborline Registry &middot; firmographic reference data.
+    Figures include modeled estimates; see
+    <a href="coverage.html">coverage &amp; methodology</a>. No bulk export.</div>
+</div></footer>
+</body></html>

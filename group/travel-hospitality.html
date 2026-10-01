@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Travel &amp; hospitality &mdash; Harborline Registry</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Harborline Registry — firmographic profiles for 1,000 technology and media companies.">
+<style>
+:root{--ink:#101c2c;--ink2:#4a5a6e;--ink3:#8494a6;--rule:#e2e8ef;--paper:#f4f7fa;
+ --surface:#fff;--brand:#0b4f6c;--brand2:#1b9aaa;--warn:#8a4b00;--warn-bg:#fff6e6;
+ --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 var(--sans)}
+a{color:var(--brand)}
+.synth{background:var(--warn-bg);border-bottom:2px solid #f0c98a;color:var(--warn);font-size:13px}
+.synth div{max-width:1000px;margin:0 auto;padding:10px 24px}
+.synth b{color:#6b3a00}
+header.top{background:var(--brand);color:#fff}
+header.top div.in{max-width:1000px;margin:0 auto;padding:16px 24px 14px;
+ display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+header.top .logo{font-size:20px;font-weight:600;letter-spacing:-.02em;color:#fff;
+ text-decoration:none;display:flex;align-items:center;gap:9px}
+header.top .logo span{opacity:.68;font-weight:400}
+header.top .logo .mark{width:17px;height:17px;border-radius:3px;flex:0 0 17px;
+ background:linear-gradient(135deg,var(--brand2) 0 50%,#9fd4dd 50% 100%);
+ box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.find{margin-left:auto}
+.find input{width:252px;max-width:46vw;background:rgba(255,255,255,.13);
+ border:1px solid rgba(255,255,255,.26);border-radius:6px;padding:7px 11px;color:#fff;
+ font:13.5px/1 var(--sans)}
+.find input::placeholder{color:rgba(255,255,255,.62)}
+.find input:focus{outline:none;background:rgba(255,255,255,.2);
+ border-color:rgba(255,255,255,.5)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:0 0 22px}
+.stats > div{background:var(--surface);padding:12px 15px}
+.stats .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:4px}
+.stats .v{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.jump{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 6px;font-size:12.5px}
+.jump a{background:var(--surface);border:1px solid var(--rule);border-radius:14px;
+ padding:4px 11px;text-decoration:none;color:var(--ink2)}
+.jump a:hover{border-color:var(--brand2);color:var(--brand)}
+.facet{margin-top:26px;scroll-margin-top:16px}
+.fhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.fhead h2{font-size:17px;font-weight:600;margin:0;letter-spacing:-.01em}
+.fmeta{font-size:12.5px;color:var(--ink3)}
+.hidden{display:none !important}
+.nohits{padding:28px 4px;color:var(--ink3);font-size:14px}
+footer .fin{max-width:1000px;margin:0 auto;padding:24px 24px 30px;
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px 26px}
+footer .fcol{display:flex;flex-direction:column;gap:5px;font-size:13px}
+footer .fcol b{color:var(--ink2);font-size:11px;letter-spacing:.07em;
+ text-transform:uppercase;margin-bottom:3px}
+footer .fcol a{color:var(--brand);text-decoration:none}
+footer .fcol a:hover{text-decoration:underline}
+footer .fbot{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:14px;
+ font-size:12.5px;color:var(--ink3)}
+nav{background:#08415a;font-size:13.5px}
+nav div{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:#bcd9e5;text-decoration:none;padding:11px 0;display:block}
+nav a:hover,nav a.on{color:#fff;box-shadow:inset 0 -2px 0 var(--brand2)}
+main{max-width:1000px;margin:0 auto;padding:26px 24px 70px}
+h1.pg{font-size:22px;margin:0 0 4px;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--ink2);font-size:13.5px;margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:8px}
+table.reg{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
+table.reg th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+ color:var(--ink3);padding:10px 12px;border-bottom:1px solid var(--rule);white-space:nowrap}
+table.reg td{padding:11px 12px;border-bottom:1px solid var(--rule)}
+table.reg tr:last-child td{border-bottom:0}
+table.reg tr:hover{background:#f8fbfd}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;padding:2px 7px;border-radius:10px;
+ background:#eaf2f6;color:var(--brand);border:1px solid #cfe2eb;white-space:nowrap}
+.pager{margin-top:22px;display:flex;gap:6px;flex-wrap:wrap;font-size:13px}
+.pager a,.pager span{padding:7px 11px;border:1px solid var(--rule);background:var(--surface);
+ text-decoration:none;color:var(--ink2);border-radius:5px}
+.pager .here{background:var(--brand);border-color:var(--brand);color:#fff}
+.prof{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;
+ background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+ margin:18px 0 22px}
+.prof > div{background:var(--surface);padding:13px 15px}
+.prof .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);
+ display:block;margin-bottom:5px}
+.prof .v{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.prof .v small{font-size:12px;font-weight:400;color:var(--ink2)}
+dl.fields{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:8px;
+ overflow:hidden}
+dl.fields div{display:flex;gap:16px;padding:10px 15px;border-bottom:1px solid var(--rule);
+ font-size:14px}
+dl.fields div:last-child{border-bottom:0}
+dl.fields dt{width:220px;flex:0 0 220px;color:var(--ink2)}
+dl.fields dd{margin:0}
+.aka{background:#f8fbfd;border:1px dashed #cfe2eb;border-radius:8px;padding:12px 15px;
+ font-size:13.5px;margin:0 0 20px}
+.aka code{background:#fff;border:1px solid var(--rule);border-radius:4px;padding:1px 6px;
+ font-size:12.5px}
+.crumb{font-size:12.5px;color:var(--ink3);margin-bottom:14px}
+footer{border-top:1px solid var(--rule);background:var(--surface);font-size:12.5px;
+ color:var(--ink3)}
+footer div{max-width:1000px;margin:0 auto;padding:20px 24px 34px}
+@media(max-width:640px){dl.fields div{flex-direction:column;gap:2px}
+ dl.fields dt{flex:none;width:auto}}
+</style></head><body>
+
+<header class="top"><div class="in">
+  <a class="logo" href="index.html"><span class="mark"></span>Harborline
+    <span>Registry</span></a>
+  <form class="find" onsubmit="return false"><input id="q" type="search"
+    placeholder="Search 1,000 companies" autocomplete="off" aria-label="Search companies"></form>
+</div></header>
+<nav><div><a href="index.html" class="">Registry</a><a href="sectors.html" class="on">By sector</a><a href="sizes.html" class="">By size</a><a href="coverage.html" class="">Coverage</a></div></nav>
+<main><div class="crumb"><a href="../sectors.html">By sector</a> &rsaquo;
+  Travel &amp; hospitality</div>
+<h1 class="pg">Travel &amp; hospitality</h1>
+<p class="sub">65 companies &middot;
+  1,133,661 employees &middot;
+  $578,641M combined revenue.
+  Showing 1&ndash;50.</p>
+<div class="card"><table class="reg">
+<thead><tr><th>Company</th><th>Sector</th><th class="num">Employees</th>
+  <th class="num">Revenue</th><th class="num">Rev / employee</th><th>HQ</th>
+</tr></thead><tbody><tr><td><a href="../company/delta-air-lines-inc.html">Delta Air Lines, Inc.</a></td><td>Enterprise</td><td class="num">198,933</td><td class="num">$123,212M</td><td class="num">$619K</td><td>IL</td></tr><tr><td><a href="../company/united-airlines-holdings-inc.html">United Airlines Holdings, Inc.</a></td><td>Enterprise</td><td class="num">137,323</td><td class="num">$52,817M</td><td class="num">$385K</td><td>CO</td></tr><tr><td><a href="../company/american-airlines-group-inc.html">American Airlines Group Inc.</a></td><td>Enterprise</td><td class="num">134,637</td><td class="num">$50,533M</td><td class="num">$375K</td><td>PA</td></tr><tr><td><a href="../company/marriott-international-inc.html">Marriott International, Inc.</a></td><td>Enterprise</td><td class="num">109,105</td><td class="num">$62,882M</td><td class="num">$576K</td><td>WA</td></tr><tr><td><a href="../company/southwest-airlines-co.html">Southwest Airlines Co.</a></td><td>Enterprise</td><td class="num">107,183</td><td class="num">$31,696M</td><td class="num">$296K</td><td>VA</td></tr><tr><td><a href="../company/hilton-worldwide-holdings-inc.html">Hilton Worldwide Holdings Inc.</a></td><td>Enterprise</td><td class="num">70,440</td><td class="num">$48,055M</td><td class="num">$682K</td><td>CO</td></tr><tr><td><a href="../company/booking-holdings-inc.html">Booking Holdings Inc.</a></td><td>Enterprise</td><td class="num">59,539</td><td class="num">$40,454M</td><td class="num">$679K</td><td>IL</td></tr><tr><td><a href="../company/ryanair-holdings-plc.html">Ryanair Holdings plc</a></td><td>Enterprise</td><td class="num">57,907</td><td class="num">$32,253M</td><td class="num">$557K</td><td>CO</td></tr><tr><td><a href="../company/hyatt-hotels-corporation.html">Hyatt Hotels Corporation</a></td><td>Enterprise</td><td class="num">52,571</td><td class="num">$32,258M</td><td class="num">$614K</td><td>CA</td></tr><tr><td><a href="../company/airbnb-inc.html">Airbnb, Inc.</a></td><td>Enterprise</td><td class="num">50,314</td><td class="num">$28,682M</td><td class="num">$570K</td><td>UT</td></tr><tr><td><a href="../company/rowanmouth-hospitality-gmbh.html">Rowanmouth Hospitality GmbH</a></td><td>Large</td><td class="num">45,185</td><td class="num">$19,848M</td><td class="num">$439K</td><td>FL</td></tr><tr><td><a href="../company/expedia-group-inc.html">Expedia Group, Inc.</a></td><td>Large</td><td class="num">41,423</td><td class="num">$13,064M</td><td class="num">$315K</td><td>GA</td></tr><tr><td><a href="../company/easyjet-plc.html">easyJet plc</a></td><td>Large</td><td class="num">39,990</td><td class="num">$27,786M</td><td class="num">$695K</td><td>WA</td></tr><tr><td><a href="../company/thistle-stays-pty-ltd.html">Thistle Stays Pty Ltd</a></td><td>Large</td><td class="num">5,230</td><td class="num">$3,567M</td><td class="num">$682K</td><td>CA</td></tr><tr><td><a href="../company/underwood-vance-hospitality-pbc.html">Underwood &amp; Vance Hospitality PBC</a></td><td>Mid-market</td><td class="num">4,897</td><td class="num">$2,830M</td><td class="num">$578K</td><td>VA</td></tr><tr><td><a href="../company/flint-hospitality-b-v.html">Flint Hospitality B.V.</a></td><td>Mid-market</td><td class="num">3,719</td><td class="num">$1,573M</td><td class="num">$423K</td><td>NJ</td></tr><tr><td><a href="../company/getyourguide-deutschland-gmbh.html">GetYourGuide Deutschland GmbH</a></td><td>Mid-market</td><td class="num">3,596</td><td class="num">$1,643M</td><td class="num">$457K</td><td>MA</td></tr><tr><td><a href="../company/vrbo-inc.html">Vrbo, Inc.</a></td><td>Mid-market</td><td class="num">2,609</td><td class="num">$1,215M</td><td class="num">$466K</td><td>NC</td></tr><tr><td><a href="../company/tucana-voyages-co.html">Tucana Voyages Co.</a></td><td>Mid-market</td><td class="num">575</td><td class="num">$324M</td><td class="num">$563K</td><td>CA</td></tr><tr><td><a href="../company/kestrelhead-voyages-b-v.html">Kestrelhead Voyages B.V.</a></td><td>Mid-market</td><td class="num">571</td><td class="num">$224M</td><td class="num">$392K</td><td>WA</td></tr><tr><td><a href="../company/ingleby-sawbridge-journeys-corporation.html">Ingleby &amp; Sawbridge Journeys Corporation</a></td><td>Mid-market</td><td class="num">569</td><td class="num">$384M</td><td class="num">$676K</td><td>PA</td></tr><tr><td><a href="../company/bexley-brook-travel-s-a.html">Bexley Brook Travel S.A.</a></td><td>Mid-market</td><td class="num">557</td><td class="num">$249M</td><td class="num">$447K</td><td>MA</td></tr><tr><td><a href="../company/compassbrook-travel-llc.html">Compassbrook Travel LLC</a></td><td>Small</td><td class="num">484</td><td class="num">$136M</td><td class="num">$281K</td><td>NJ</td></tr><tr><td><a href="../company/oakeshott-hesketh-voyages-s-a.html">Oakeshott &amp; Hesketh Voyages S.A.</a></td><td>Small</td><td class="num">475</td><td class="num">$177M</td><td class="num">$374K</td><td>WA</td></tr><tr><td><a href="../company/harrow-underwood-journeys-ab.html">Harrow &amp; Underwood Journeys AB</a></td><td>Small</td><td class="num">473</td><td class="num">$203M</td><td class="num">$429K</td><td>CA</td></tr><tr><td><a href="../company/uxbridge-travel-oy.html">Uxbridge Travel Oy</a></td><td>Small</td><td class="num">472</td><td class="num">$174M</td><td class="num">$369K</td><td>IL</td></tr><tr><td><a href="../company/lyratarn-travel-oy.html">Lyratarn Travel Oy</a></td><td>Small</td><td class="num">433</td><td class="num">$216M</td><td class="num">$499K</td><td>CO</td></tr><tr><td><a href="../company/kayak-software-corporation.html">Kayak Software Corporation</a></td><td>Small</td><td class="num">397</td><td class="num">$269M</td><td class="num">$678K</td><td>CA</td></tr><tr><td><a href="../company/blackwood-travel-pbc.html">Blackwood Travel PBC</a></td><td>Small</td><td class="num">392</td><td class="num">$242M</td><td class="num">$618K</td><td>PA</td></tr><tr><td><a href="../company/doradolinn-hospitality-a-s.html">Doradolinn Hospitality A/S</a></td><td>Small</td><td class="num">389</td><td class="num">$144M</td><td class="num">$370K</td><td>TX</td></tr><tr><td><a href="../company/calloway-travel-s-a.html">Calloway Travel S.A.</a></td><td>Small</td><td class="num">370</td><td class="num">$242M</td><td class="num">$655K</td><td>CA</td></tr><tr><td><a href="../company/hostelworld-group-plc.html">Hostelworld Group plc</a></td><td>Small</td><td class="num">360</td><td class="num">$249M</td><td class="num">$691K</td><td>MA</td></tr><tr><td><a href="../company/heronfell-journeys-gmbh.html">Heronfell Journeys GmbH</a></td><td>Small</td><td class="num">339</td><td class="num">$115M</td><td class="num">$339K</td><td>VA</td></tr><tr><td><a href="../company/basaltmouth-travel-limited.html">Basaltmouth Travel Limited</a></td><td>Small</td><td class="num">255</td><td class="num">$141M</td><td class="num">$552K</td><td>CA</td></tr><tr><td><a href="../company/trivago-n-v.html">Trivago N.V.</a></td><td>Small</td><td class="num">245</td><td class="num">$72M</td><td class="num">$295K</td><td>NY</td></tr><tr><td><a href="../company/oakeshott-fell-hospitality-b-v.html">Oakeshott Fell Hospitality B.V.</a></td><td>Small</td><td class="num">236</td><td class="num">$91M</td><td class="num">$387K</td><td>CO</td></tr><tr><td><a href="../company/ingleby-ormerod-voyages-a-s.html">Ingleby &amp; Ormerod Voyages A/S</a></td><td>Small</td><td class="num">218</td><td class="num">$58M</td><td class="num">$267K</td><td>CA</td></tr><tr><td><a href="../company/cygnusmere-voyages-s-p-a.html">Cygnusmere Voyages S.p.A.</a></td><td>Small</td><td class="num">198</td><td class="num">$64M</td><td class="num">$323K</td><td>GA</td></tr><tr><td><a href="../company/jarvis-ton-travel-s-a.html">Jarvis Ton Travel S.A.</a></td><td>Small</td><td class="num">115</td><td class="num">$79M</td><td class="num">$689K</td><td>NC</td></tr><tr><td><a href="../company/corvusstead-hospitality-pbc.html">Corvusstead Hospitality PBC</a></td><td>Small</td><td class="num">113</td><td class="num">$42M</td><td class="num">$371K</td><td>GA</td></tr><tr><td><a href="../company/brennan-yarrow-stays-s-a.html">Brennan &amp; Yarrow Stays S.A.</a></td><td>Small</td><td class="num">58</td><td class="num">$28M</td><td class="num">$481K</td><td>WA</td></tr><tr><td><a href="../company/jessop-hospitality-pbc.html">Jessop Hospitality PBC</a></td><td>Small</td><td class="num">58</td><td class="num">$14M</td><td class="num">$237K</td><td>CO</td></tr><tr><td><a href="../company/threlfall-garrow-hospitality-co.html">Threlfall &amp; Garrow Hospitality Co.</a></td><td>Small</td><td class="num">57</td><td class="num">$38M</td><td class="num">$672K</td><td>MA</td></tr><tr><td><a href="../company/westtarn-journeys-llc.html">Westtarn Journeys LLC</a></td><td>Small</td><td class="num">56</td><td class="num">$39M</td><td class="num">$694K</td><td>VA</td></tr><tr><td><a href="../company/uxbridge-journeys-limited.html">Uxbridge Journeys Limited</a></td><td>Small</td><td class="num">52</td><td class="num">$12M</td><td class="num">$222K</td><td>UT</td></tr><tr><td><a href="../company/iron-journeys-plc.html">Iron Journeys plc</a></td><td>Small</td><td class="num">51</td><td class="num">$32M</td><td class="num">$635K</td><td>GA</td></tr><tr><td><a href="../company/stonebend-stays-s-a.html">Stonebend Stays S.A.</a></td><td>Small</td><td class="num">51</td><td class="num">$10M</td><td class="num">$206K</td><td>WA</td></tr><tr><td><a href="../company/merlinhead-travel-oy.html">Merlinhead Travel Oy</a></td><td>Micro</td><td class="num">49</td><td class="num">$26M</td><td class="num">$540K</td><td>IL</td></tr><tr><td><a href="../company/prime-stays-co.html">Prime Stays Co.</a></td><td>Micro</td><td class="num">45</td><td class="num">$24M</td><td class="num">$530K</td><td>NY</td></tr><tr><td><a href="../company/halloran-garrow-stays-limited.html">Halloran &amp; Garrow Stays Limited</a></td><td>Micro</td><td class="num">44</td><td class="num">$25M</td><td class="num">$564K</td><td>NY</td></tr></tbody></table></div><div class="pager"><span class="here">1</span><a href="travel-hospitality-2.html">2</a></div></main>
+<script>
+/* Filters the rows of any table on the page. Deliberately client-side: the site
+   has no backend, and a search that quietly returns nothing would be worse than
+   none at all, so an empty result says so. */
+(function () {
+  var box = document.getElementById("q");
+  if (!box) return;
+  var tables = [].slice.call(document.querySelectorAll("table.reg"));
+  if (!tables.length) return;
+  var msg = document.createElement("div");
+  msg.className = "nohits hidden";
+  msg.textContent = "No company on this page matches that.";
+  (document.querySelector("main") || document.body).appendChild(msg);
+
+  box.addEventListener("input", function () {
+    var q = box.value.trim().toLowerCase(), shown = 0;
+    tables.forEach(function (t) {
+      var rows = [].slice.call(t.tBodies[0] ? t.tBodies[0].rows : []);
+      var vis = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.classList.toggle("hidden", !hit);
+        if (hit) vis++;
+      });
+      shown += vis;
+      var sec = t.closest("section.facet");
+      if (sec) sec.classList.toggle("hidden", q && vis === 0);
+    });
+    msg.classList.toggle("hidden", !(q && shown === 0));
+  });
+})();
+</script>
+<footer><div class="fin">
+  <div class="fcol"><b>Registry</b>
+    <a href="index.html">All companies</a><a href="sectors.html">By sector</a>
+    <a href="sizes.html">By size</a></div>
+  <div class="fcol"><b>Reference</b>
+    <a href="coverage.html">Coverage &amp; methodology</a>
+    <a href="coverage.html#fields">Field definitions</a>
+    <a href="robots.txt">robots.txt</a></div>
+  <div class="fcol"><b>Release</b>
+    <span>Edition 2026.3</span><span>1,000 companies &middot; 15 sectors</span>
+    <span>Last compiled 28 September 2026</span></div>
+  <div class="fbot">Harborline Registry &middot; firmographic reference data.
+    Figures include modeled estimates; see
+    <a href="coverage.html">coverage &amp; methodology</a>. No bulk export.</div>
+</div></footer>
+</body></html>
