@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Instacart, Inc. &mdash; Harborline Registry</title>
+<title>Coverage &amp; methodology &mdash; Harborline Registry</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Harborline Registry — firmographic profiles for 130 technology and media companies.">
 <style>
@@ -110,38 +110,64 @@ footer div{max-width:1000px;margin:0 auto;padding:20px 24px 34px}
   <form class="find" onsubmit="return false"><input id="q" type="search"
     placeholder="Search 130 companies" autocomplete="off" aria-label="Search companies"></form>
 </div></header>
-<nav><div><a href="index.html" class="">Registry</a><a href="sectors.html" class="">By sector</a><a href="sizes.html" class="">By size</a><a href="coverage.html" class="">Coverage</a></div></nav>
-<main><div class="crumb"><a href="../index.html">Registry</a> &rsaquo;
-  Instacart, Inc.</div>
-<h1 class="pg">Instacart, Inc.</h1>
-<p class="sub">Record C10156 &middot; Logistics &middot;
-  founded 2005 &middot; Public</p>
+<nav><div><a href="index.html" class="">Registry</a><a href="sectors.html" class="">By sector</a><a href="sizes.html" class="">By size</a><a href="coverage.html" class="on">Coverage</a></div></nav>
+<main>
+<h1 class="pg">Coverage &amp; methodology</h1>
+<p class="sub">Edition 2026.3 &middot; compiled 28 September 2026</p>
 
-<div class="prof">
-  <div><span class="k">Employees</span><span class="v">45,264</span></div>
-  <div><span class="k">Annual revenue</span>
-    <span class="v">$12,922<small>M</small></span></div>
-  <div><span class="k">Revenue per employee</span>
-    <span class="v">$286<small>K</small></span></div>
-  <div><span class="k">Size band</span><span class="v">Large</span></div>
+<div class="stats">
+  <div><span class="k">Companies</span><span class="v">130</span></div>
+  <div><span class="k">Sectors</span><span class="v">15</span></div>
+  <div><span class="k">Median headcount</span>
+    <span class="v">595</span></div>
+  <div><span class="k">Headcount range</span><span class="v" style="font-size:15px">
+    8&ndash;223,247</span></div>
 </div>
 
-<div class="aka"><b>Also known as.</b> This company appears in filings and reporting
-  under: <code>Instacart</code>. Names in court records are not normalised, so a search on the
-  canonical name alone will miss records filed under a trade name.</div>
+<h2 style="font-size:17px;margin:26px 0 8px">Coverage</h2>
+<p class="sub">The registry covers 130 companies across 15 sectors,
+  selected for activity in consumer internet, platform and media markets. Inclusion is
+  not a ranking and the registry is not exhaustive: a company absent from it has not
+  been assessed, which is not the same as having been assessed and excluded.</p>
 
+<h2 style="font-size:17px;margin:26px 0 8px" id="fields">Field definitions</h2>
 <dl class="fields">
-  <div><dt>Sector</dt><dd>Logistics</dd></div>
-  <div><dt>Headquarters</dt><dd>VA, United States</dd></div>
-  <div><dt>Year founded</dt><dd>2005</dd></div>
-  <div><dt>Ownership</dt><dd>Public</dd></div>
-  <div><dt>Chief executive</dt><dd>Cosmo Trelawny</dd></div>
-  <div><dt>Chief executive gender</dt><dd>man</dd></div>
-  <div><dt>Chief executive tenure</dt><dd>1 years</dd></div>
-  <div><dt>Employee rating</dt><dd>4.7 / 5.0</dd></div>
-  <div><dt>Office dog policy</dt><dd>Not allowed</dd></div>
-  <div><dt>Firmographic confidence</dt><dd>Low</dd></div>
-</dl></main>
+  <div><dt>Employees</dt><dd>Total headcount, full-time equivalent. A
+    <b>modeled estimate</b> where a company does not disclose.</dd></div>
+  <div><dt>Annual revenue</dt><dd>Trailing twelve months, reported in millions of US
+    dollars. A <b>modeled estimate</b> where a company does not disclose.</dd></div>
+  <div><dt>Revenue per employee</dt><dd>Derived: revenue divided by headcount. Inherits
+    the uncertainty of both inputs and should be read as an order of magnitude.</dd></div>
+  <div><dt>Size band</dt><dd>Derived from headcount. Micro &le;50, Small &le;500,
+    Mid-market &le;5,000, Large &le;50,000, Enterprise above.</dd></div>
+  <div><dt>Sector</dt><dd>Primary market only. Single-assignment, so a company active
+    in several markets appears under one.</dd></div>
+  <div><dt>Ownership</dt><dd>Public, private, or subsidiary of a larger group.</dd></div>
+  <div><dt>Chief executive</dt><dd>Name, stated gender and tenure in the role.</dd></div>
+  <div><dt>Employee rating</dt><dd>Aggregate sentiment on a five-point scale.</dd></div>
+  <div><dt>Office dog policy</dt><dd>Whether dogs are permitted on premises. Collected
+    for a client who asked; retained because removing a field breaks downstream
+    joins.</dd></div>
+  <div><dt>Firmographic confidence</dt><dd>How much of a record rests on disclosure
+    rather than estimation. High, medium or low.</dd></div>
+  <div><dt>Also known as</dt><dd>Trade names and corporate variants the company appears
+    under elsewhere.</dd></div>
+</dl>
+
+<h2 style="font-size:17px;margin:26px 0 8px">Name matching</h2>
+<p class="sub">Each record publishes one canonical name plus the variants the company is
+  known by. Public filings and court records are not normalised &mdash; the same company
+  may appear under a trade name in one document and a corporate name in another, or with
+  a different suffix, or misspelled. Matching on canonical name alone will therefore lose
+  records. The variant list on each profile exists so that a join can be built that
+  does not.</p>
+
+<h2 style="font-size:17px;margin:26px 0 8px">Access</h2>
+<p class="sub">There is no bulk export, no CSV and no API. Profiles are reachable by
+  browsing or by crawling; see <a href="robots.txt">robots.txt</a> for crawl policy.
+  Derived fields should be recomputed from the inputs rather than cached, since the
+  inputs are revised between editions.</p>
+</main>
 <script>
 /* Filters the rows of any table on the page. Deliberately client-side: the site
    has no backend, and a search that quietly returns nothing would be worse than
